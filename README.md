@@ -35,12 +35,23 @@ The project layout should look like
     `-- wsgi.py
 ```
 
+### Add new app to `INSTALLED_APPS`
+
+Edit the MY_Project/settings.py
+```
+INSTALLED_APPS = [
+    ...
+    'rest_framework',
+    'my_app.apps.My_appConfig',
+]
+```
+
 ### Commands
 
 Apply updates
 - `python manage.py migrate`
 
-Create an initial user named `admin` with a password of `password123`
+Create an initial user named `admin` with a password of `123456`
 - `python manage.py createsuperuser --email admin@example.com --username admin`
 
 
